@@ -1,0 +1,111 @@
+Software Development Life Cycle(SDLC)
+
+1)Traditional Water Fall Model:
+
+Requirements and Gathering Analysis(customer requirements)
+
+Design(Tools/CICD)
+
+Implement (code, System, RegTest)
+
+Test(UAT)
+
+Deploy(Release)
+
+Maintenance (Bug fixing, support)
+
+2) What is Agile Methodology?
+
+i. In the Agile methodology each project is broken up in to several iterations.
+ii. All iterations should be of the same time duration(between 2 to 8 weeks).
+iii. At the end of each iteration a working product should be delivered. 
+
+suitable for complex projects
+
+3)minimum viable product (mvp)
+
+4) Limitations of Agile:
+
+Development team wants change
+
+Operations Team wants stability
+
+Development Team: code works fine in my laptop
+
+Operation Team: There is some problem with the code, it does not work in production
+
+5)Development with out DevOps culture:
+
+Release and Deploy mismatch
+
+unpredictable issues
+
+Blame Game
+
+Lack of monitoring
+
+6) Development with DevOps Culture:
+
+i) Streamlined Deliveries
+ii) Team work in collaboration
+iii) Continuous monitoring and Feedback
+
+7)what need to be in done?
+Developers: 
+use system with little or no waiting time
+use system with updated code
+Operations:
+System should be up and running most of the time
+System required for easy administration
+Effective monitoring and feedbacks
+system should be established
+
+8) what DevOps is not?
+
+DevOps is not a role, person or organisation
+
+DevOps is not a separate team
+
+DevOps is not a product or a tool
+
+DevOps is not about just writing scripts or implementing tools
+
+9) what is DevOps?
+
+DevOps is a practice that allows a single team to manage the entire application development life cycle, that is development, testing, deployment and monitoring
+
+10) What does DevOps do?
+
+Integrates developers and operations teams improves collaboration and productivity by:
+Automating infrastructure
+Automating workflows
+Continuously measuring application performance
+
+11) Skills of a DevOps Engineer
+
+Tools:
+version control-GIT
+continuous Integration- Jenkins
+Virtualisation/Containerisation-Docker/Kubernetes
+configuration management-puppet/ansible
+monitoring-Nagios
+
+Networking Skills:
+General networking skills
+Establishing connection between the containers 
+port forwarding/container orchestration
+
+Other Skills:
+people skills
+process skill
+customer skills and empathy
+cloud awareness
+
+
+
+
+
+
+
+
+
