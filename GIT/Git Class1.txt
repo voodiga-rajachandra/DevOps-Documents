@@ -1,0 +1,73 @@
+1)Why need version control?
+
+a)collaboration
+b)storing versions
+c)figuring out what happened
+d) Backup
+
+2)what is version control?
+
+version control is a system that documents changes made to a file or a set of files. It allows multiple users to manage multiple revisions of the same unit of information. It is a snapshot of your project over time
+
+3)version control types:
+
+Local version control(LVC)
+
+The practice of having the version database in the local computer
+Local database keeps a record of the changes made to files in version database
+
+Local Version Control: Issue
+
+Issue: multiple people parallelly working on the same project
+
+Solution: centralised version control
+
+4)Centralized Version Control(CVC):
+
+Local version controls issues are resolved by centralized version control.
+
+In cvc, a central repository is maintained where all the versioned files are kept.
+
+Now users can checkout and check-in files from their different computers at anytime
+
+5)centralized version control:
+Issue: Incase of central server failure whole system goes down
+
+Solution: Distributed version control
+
+6)Distributed version control:
+
+version database is stored at every users local system and at the remote server
+
+users manipulate the local files and then upload the changes to the remote server If any of the servers die a client server can be used to restore.
+
+7)what is git?
+
+Git is an open source distributed version control system(DVCS) which records changes made to the files laying emphasis on speed data integrity and distributed, non-linear workflows.
+
+8)The GIT file workflow:
+
+The remote repository is the server where all the collaborators upload changes made to the files.
+
+ Local repository is users copy of the version database
+
+The user access all the files through local repository and then push the change made to the remote repository.
+
+workspace is users active directory 
+The user modifies existing files and creates new files in this space. Git tracks these changes compared to your local repository.
+
+Stage is a place where all the modified files marked to be committed are placed
+
+clone command creates a copy of an existing remote repository inside the local repository
+
+commit command commits all the files in the staging area to the local repository
+
+push command pushes all the changes made in the local repository to the remote repository
+
+Fetch command collects the changes made in the remote repository and copies them to the local repository
+this command doesn't affect our workspace
+
+pull like fetch, get, all the changes from the remote repository and copies them to the local repository.
+
+pull merges those changes to the current working directory
+

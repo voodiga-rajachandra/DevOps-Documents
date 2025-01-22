@@ -1,0 +1,69 @@
+DevOps Lifecycle:
+
+1) Plan:
+
+First stage of DevOps cycle, where you plan, track, visualise and summarize your project before working/starting it.
+
+planning tools:
+
+Jira, Trello, Tricentis
+
+2)Code:
+
+Second Stage of DevOps cycle, where the developers write their code.
+
+coding tools:
+
+eclipse,git,subversion
+
+3)Build:
+
+Build is a pre-release version and is identified by a build number rather than by a release number
+
+building tools:
+
+Apache ANT, Jenkins, Maven, Gradle
+
+4)Test:
+
+process of executing automated tests as part of the software delivery pipeline in order to obtain feedback on the business risks associated with a software release as rapidly as possible.
+
+Testing Tools:
+
+Jmeter, Selenium
+
+5)Release:
+
+This phase helps to integrate code into a shared repository using which you can detect and locate errors quickly and easily
+
+Releasing Tools:
+
+Travis CI
+
+6)Deploy:
+
+Manage and maintain development and deployment of software systems and servers in any computational environment
+
+Deploying Tools:
+
+aws, ansible, chef
+
+7)Operate:
+
+This phase is to keep the system upgraded with the latest update
+
+Operating Tools:
+
+aws ansible chef
+
+8)monitor:
+
+It ensures that the application is performing as desired and the environment is stable. It quickly determines when a service is unavailable and understand the underlying causes
+
+Monitoring Tools: 
+
+Prometheus and Grafana
+
+
+
+
