@@ -1,0 +1,36 @@
+1)Branching Strategy:
+
+Base-main-major-snapshot of project
+
+Dev
+
+QA/Test
+
+Release branch
+
+Features
+
+Hotfix -production-Base
+
+2) what are the files created when empty repository?
+.git
+
+3)syntax for git amend
+
+git commit --amend -m "---"
+
+4)git tag -a <annotation> -m <messages>
+
+5)show tags git tag
+
+6)adding a git tag to one of the previous commits
+
+git tag -a <annotation> -m <message>
+
+7)commit id can be obtained from git logs
+
+8) all these tags can be viewed in git
+git show <tag-name>
+git push --tags
+
+9) A fork is a copy of repository forking a repository allows you to freely experiment with changes without affecting the original project.
