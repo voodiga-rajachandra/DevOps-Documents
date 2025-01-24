@@ -1,0 +1,98 @@
+1)git cherry-pick:
+Definition: Apply the changes introduced by an existing commit to your current branch. This is useful when you want to pick specific commits from one branch and apply them to another.
+
+git cherry-pick <commit-hash>
+
+2)git rebase:
+Definition: Reapply commits on top of another base branch. It's often used to keep a linear project history.
+
+git rebase <branch name>
+
+3)git reflog:
+Definition: Shows a log of changes made to references in your repository. Useful for recovering lost commits.
+
+
+git reflog
+
+4)git stash:
+Definition: Temporarily save changes in your working directory that you’re not ready to commit. It allows you to switch branches without losing work.
+
+git stash
+
+5)git reset:
+Definition: Undo changes by resetting the current branch to a specific commit.
+Soft reset (keep changes in the working directory):
+git reset --soft HEAD~1
+Hard reset (discard all changes):
+git reset --hard HEAD~1
+
+6)git diff
+Definition: Shows changes between commits, branches, or the working directory.
+
+Compare current changes:
+git diff
+
+Compare two branches:
+git diff branch1 branch2
+
+7)git log:
+Definition: Show commit history with various filters and formatting options.
+git log
+
+Show one-line commits:
+git log --oneline
+
+8)git tag
+Definition: Create, list, or delete tags in a repository. Tags are used for marking specific commits, like release versions.
+
+Create an annotated tag:
+git tag -a v1.0 -m "Version 1.0 release"
+
+Push tags to remote:
+git push origin --tags
+
+9)git show
+Definition: Displays details about a commit, such as changes, author, and date.
+Show details of the latest commit:
+git show
+
+Show a specific commit:
+git show <commit-hash>
+
+10)git init
+<directory>	
+Create empty Git repo in specified directory. Run with no arguments to initialize the current directory as a git repository.
+
+11)git clone <repo>	
+Clone repo located at <repo> onto local machine. Original repo can be located on the local filesystem or on a remote machine via HTTP or SSH.
+12)git config user.name <name>	
+Define author name to be used for all commits in current repo. Devs commonly use --global flag to set config options for current user.
+13)git add
+<directory>	
+Stage all changes in <directory> for the next commit. Replace <directory> with a <file> to change a specific file.
+14)git commit -m "<message>"	
+Commit the staged snapshot, but instead of launching a text editor, use <message> as the commit message.
+
+15)git status
+List which files are staged, unstaged, and untracked.
+
+16)git log	
+Display the entire commit history using the default format. For customization see additional options.
+
+17)git diff
+Show unstaged changes between your index and working directory.
+
+
+18)git reset
+Reset staging area to match most recent commit, but leave the working directory unchanged.
+
+19)git reset --hard	
+Reset staging area and working directory to match most recent commit and overwrites all changes in the working directory.
+
+20)git reset <commit>	
+Move the current branch tip backward to <commit>, reset the staging area to match, but leave the working directory alone.
+21)git reset --hard <commit>		
+Same as previous, but resets both the staging area & working directory to
+match. Deletes uncommitted changes, and all commits after <commit>.
+
+
