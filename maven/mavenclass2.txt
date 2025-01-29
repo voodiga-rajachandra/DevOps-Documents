@@ -1,0 +1,58 @@
+1)Maven through Terminal
+
+Install the maven tar file after verifying the signature
+
+After installing the maven, check its version from ubuntu terminal by using the below command
+
+mvn -version
+
+Below command will create a project using maven
+
+mvn archetype:generate -DgroupId=com.example -DartifactId=helloworld -D archetype ArtifactId=maven-archetype-quickstart -Dinteractivemode=false
+
+2)Maven Lifecycle phases(8 phases)
+
+validate:checks if the project is correct, having all the necessary information
+
+mvn validate
+
+compile:compile the source code of the project
+
+mvn compile
+
+test:test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed
+
+mvn test
+
+package: take the compiled code and package if in its distributable format such as JAR
+
+mvn package
+
+integration-test:process and deploy the package in to an environment where integration tests can be run
+
+mvn integration-test
+
+verify:run any checks to verify the package is valid and meets quality criteria
+
+mvn verify
+
+install: install the package into the local repository for use as a dependency in other projects locally 
+
+mvn install
+
+deploy:done in an integration or release environment, copies the final package to the remote repository for sharing with other developers and projects
+
+mvn deploy
+
+3) what is .m2 folder?
+
+it is local repository of the apache maven
+c:/users/username/m2
+
+Apache maven has an advantage that is when we run any of the life cycle phases it will also include previous phases as well 
+
+example if we run mvn package (4th phase) it will also run previous phases as well(validate, compile, test)
+
+
+
+
