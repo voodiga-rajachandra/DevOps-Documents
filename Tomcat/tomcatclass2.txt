@@ -1,0 +1,51 @@
+1) Apache TomCat Folder Structure
+
+conf-configuration
+bin-binary (to start and stop the server)
+webapps-hosting the application
+logs-server logs
+lib-libraries
+temp-temporary files
+
+
+2)How to access the application url:
+127.0.0.1:8080 or localhost:8080
+<url of TomCat>/<ArtifactName>
+Ex:localhost:8080/aja 
+where "aja"-->Artifact Name
+
+3) To create project in maven:
+mvn archetype:generate -DgroupId=com.example.helloworld -DartifactId=helloworld -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
+4)How we can place the artifact from the maven project of target folder to apache tomcat webapp folder:
+cp <pathwhereartifact> <path where webapps of tomcat>
+cp <source> <destination>
+<destinationfolder> cp/<source> .
+
+while copying use forward slash "/"
+
+4)If we do any configuration changes we need to restart the server
+To change the port number of tomcat server we need to stop and start server
+To stop tomcat ctrl+c
+
+5)To deploy the application anotherway is by using the tomcat gui
+Access the url of tomcat then search for the .war file to deploy
+click on choose file it will open dialogbox in dialogbox we need to select the artifact and click on open then we need to click on deploy button
+
+6)how can we access apache tomcat GUI go to tomcat home folder
+home folder of apache tomcat -->conf
+modify "tomcat-user.xml"(using text editor eg:vi)
+vi tomcat-user.xml (we need to search for the line)<user username="admin"
+need to uncomment these lines -- "<!--" "-->"
+once we modify tomcat-user.xml file save and quit
+
+7)what is the difference between pom.xml and settings.xml
+Use pom.xml to define dependencies, plugins, and configurations specific to a project.
+Use settings.xml to configure Maven behavior globally, such as repository authentication and proxy settings.
+
+8)to view the last n number of lines where n is a number: tail -15 filename
+
+9)to view the first n number of lines where n is a number: head -2 filename
+
+
+
