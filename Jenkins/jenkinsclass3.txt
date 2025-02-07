@@ -13,6 +13,15 @@ once logged in to user Jenkins gui click on username(top right corner) click on 
 
 2)what if Jenkins administrator forget the password?(task)
 
+If a Jenkins administrator forgets the password, they can reset it using one of the following methods:
+
+Method 1: Reset via CLI (If Available)
+
+Method 2: Delete the Admin Password from config.xml
+
+Method 3: Reset Admin Password via User XML File
+
+Method 4: Check Initial Admin Password (For Fresh Installations)
 
 slaves, Nodes, agents(same in Jenkins)
 
@@ -47,8 +56,32 @@ path:manage jenkins-->status information--> about Jenkins
 
 website:crontab.guru
 (https://crontab.guru/)
+
 look for webhooks in git (task2)
-what why purpose
+
+what: A Git webhook is a way for a repository to send real-time notifications to external services when certain events occur, such as a push, pull request, or merge. Webhooks are commonly used for CI/CD automation, triggering deployments, notifications, and integrations with other tools.
+
+why:Why Use Git Hooks?
+Enforce coding standards (e.g., run linters before committing)
+Automate tasks (e.g., generate documentation on commits)
+Improve security (e.g., prevent committing secrets)
+Streamline workflows (e.g., trigger CI/CD processes locally) 
+
+purpose:Git hooks serve different purposes depending on when they are executed. There are two types:
+
+1. Client-Side Hooks (Run on Developer's Machine)
+Used for automation before sending changes to a remote repository.
+
+pre-commit → Runs before a commit is created (e.g., check code style).
+commit-msg → Runs after commit message is written (e.g., enforce commit message format).
+pre-push → Runs before pushing changes (e.g., run tests).
+post-commit → Runs after a commit (e.g., send notifications).
+2. Server-Side Hooks (Run on Remote Repository)
+Used to enforce policies and automate server-side processes.
+
+pre-receive → Runs before accepting a push (e.g., check branch policies).
+update → Runs when a branch is updated (e.g., enforce rules).
+post-receive → Runs after a push is completed (e.g., trigger deployments).
 
 4)ways to trigger the Jenkins jobs
 
