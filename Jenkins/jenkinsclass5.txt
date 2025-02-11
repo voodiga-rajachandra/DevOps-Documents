@@ -1,0 +1,41 @@
+1)How to change the default port number of Jenkins?
+go to the path c:/Program Files/Jenkins in that folder find the Jenkins.xml file search for "--httpPort=8080"
+in Jenkins.xml where 8080 is the default port number inorder to change this default portno we should replace 8080 by our own port no then save it once modified this Jenkins.xml
+file restart the Jenkins server.
+Note:Before changing any Jenkins configurations or port number better take backup of original file for safer side.
+
+2)what if Jenkins administrator forget the password?
+go to the Jenkins home directory
+c:/ProgramData/Jenkins/.jenkins in this path open config.xml file search for <useSecurity>true<useSecurity>
+replace true with False
+<useSecurity>false</useSecurity>
+then save it then in browser access the Jenkins url where you will not see any user details or login details in the Jenkins GUI and go for the manage Jenkins.
+First we need to go to security under security realm (when we change config.xml from true to false it will be none)
+first we need to change security realm from none to Jenkins own user database we should go for authorization (when we change config.xml from true to false authorization will change to anyone
+can do anything) here we need to change from anyone can do anything to either matrix based or project based strategy. once you changed the strategy under that uncheck the anonymous and click on add user button add the admin user and give the role as administrator then save it. we need to go for users managejenkins-->users-->go for the admin user-->change the password--> then save it.
+now we need to restart the Jenkins server
+Note:better take backup of config.xml once restarting Jenkins server check with admin user whether admin user has all the privileges or not then go back to config.xml and modify use security tag from false to true then restart the Jenkins server.
+
+3)using Jenkins environment variables
+Jenkins pipeline exposes environment variables via the global variable env, which is available from anywhere with in a Jenkins file
+
+URL: Jenkins.io/doc/book/pipeline/jenkinsfile/#using-environment-variables
+Below are he some environmental variables
+1)BUILD_ID
+The current buildID,identical to BUILD_NUMBER for builds created like wise we have BUILD_NUMBER,BUILD_TAG,BUILD_URL,JENKINS_URL,JOB_NAME,NODE_NAME, WORKSPACE
+
+FOR EXAMPLE USERS JENKINS FILE(declarative pipeline) in that url only you will see example code copy that code create new item in Jenkins for pipeline job. replace the script with copied code and save it and run it or build it expected output should be
+Running 1 on http://localhost:8080/
+
+Task (even though we changed default port no of Jenkins from 8080 to another port but it here still it is showing with default port no only)
+
+how to parameterize the Jenkins job?
+
+parameters or variables allow you to prompt users for one or more inputs that will be passed in to a build
+
+create new job in general configuration of that job you can see the option this project is parameterized need to checkbox that and there you will see option add parameter dropdown click on that you will see various parameters those are Boolean,choice,credentials,file,multiline string,password,run,string
+for example click on choice parameter defines a simple string parameter which can be selectedfrom a list. you can use it during a build keep the ame as Env
+and under choices wecan give more than one environment name and under description.
+A description that will be shown to the user later and clickon save
+
+when you check the job to be trigger you will seebuild with parameters option click on that and select the choices which we configured and go for the build button this is how we can define parameteized values.
