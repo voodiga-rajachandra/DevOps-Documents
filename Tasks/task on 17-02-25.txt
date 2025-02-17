@@ -1,0 +1,73 @@
+1)What happens when we turn on computer?
+
+The power supply sends electricity to the components of the computer, such as the motherboard, hard drive, and fans.
+The BIOS (basic input/output system) or UEFI initializes and performs a power-on self-test (POST), which checks the basic hardware components to ensure they are working properly. If any issues are detected, error messages may be displayed.
+The operating system (OS), such as Windows or macOS, is loaded from the hard drive or another storage device into the computer’s RAM (random access memory).
+The OS then initializes its own components and drivers and presents the login screen or desktop environment to the user.
+
+2) In Linux, GNU stands for "GNU's Not Unix". It is a recursive acronym, meaning the first letter stands for the acronym itself.
+
+3)GNU is a free and open-source software project started by Richard Stallman in 1983 under the Free Software Foundation (FSF). The goal was to create a Unix-like operating system that was completely free for users to modify, distribute, and use.
+
+4)The ext (Extended File System) family consists of a series of file systems used in Linux operating systems. They evolved over time to improve performance, reliability, and feature support. Here's a breakdown of each:
+
+1. ext (Extended File System)
+First introduced in 1992.
+The first filesystem designed specifically for Linux.
+Had many limitations, including poor performance and lack of key features like journaling.
+2. ext2 (Second Extended File System)
+Introduced in 1993.
+Improved performance over ext.
+Does NOT support journaling, meaning after a crash, the system needs to perform a full filesystem check.
+Used in USB drives and SD cards due to its simplicity and low overhead.
+3. ext3 (Third Extended File System)
+Introduced in 2001.
+Added journaling, reducing the risk of data loss during crashes.
+Backward compatible with ext2 (can be mounted as ext2 if journaling is disabled).
+Not as fast as other modern file systems.
+4. ext4 (Fourth Extended File System)
+Introduced in 2008.
+Supports larger file sizes (up to 16 TB) and larger volumes (up to 1 EB).
+More efficient storage allocation with delayed allocation and multi-block allocation.
+Backward compatible with ext3 and ext2.
+Faster and more reliable than ext3, making it the default Linux filesystem in most distributions.
+
+Which One Should You Use?
+ext2: Best for USB drives and SD cards (to reduce write operations).
+ext3: Only if you're working with an old Linux system.
+ext4: Recommended for modern Linux systems due to performance and reliability
+
+
+
+Linux directory structure
+/ – The root directory
+/bin – Binaries
+/dev – Device files
+/etc – Configuration files
+/usr(unix sharable resource) – User binaries and program data
+/home – User personal data
+/lib – Shared libraries
+/sbin – System binaries
+/tmp – Temporary files
+/var – Variable data files
+/boot – Boot files
+/proc – Process and kernel files
+/opt – Optional software
+/root – The home directory of the root
+/media – Mount point for removable media
+/mnt – Mount directory
+/srv – Service data
+
+
+what are the some special files that represent hardware devices, system information etc
+
+In Linux, special files are used to represent hardware devices, system information, and process management. These files are typically found in directories like /dev, /proc, and /sys. Here’s an overview of the important ones:
+
+Special File	         Purpose
+/dev/sda, /dev/sdb	Hard drives
+/dev/null	       Discards all data
+/dev/zero	       Generates null bytes
+/dev/tty	       Terminal interface
+/proc/cpuinfo	       CPU details
+/proc/meminfo	       Memory usage
+/sys/class/net/	       Network interfaces
