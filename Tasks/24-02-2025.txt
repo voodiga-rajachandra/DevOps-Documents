@@ -1,0 +1,19 @@
+Using GitHub Website
+Go to your repository on GitHub.
+Click on the "Pull Requests" tab.
+Find the merged pull request.
+You will see a button labeled "Delete branch"—click it to delete the branch.
+
+git reset
+Used to move the HEAD and optionally modify the index (staging area) and working directory.
+
+Primarily modifies the commit history and staging area.
+Can be destructive if used incorrectly.
+
+git restore 
+Used to restore files in the working directory or staging area.
+
+Does not affect commit history.
+Safer than git reset for modifying files.
+
+git reset --soft is a Git command used to move the HEAD (current branch pointer) to an earlier commit without modifying the staging area or working directory. This means that all your changes remain staged (ready to be committed), but the commit history is rolled back.
