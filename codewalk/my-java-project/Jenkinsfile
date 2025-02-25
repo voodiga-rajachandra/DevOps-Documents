@@ -1,0 +1,39 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Checkout Code') {
+            steps {
+                echo 'Checking out the latest code from the repository...'
+                checkout scm
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                echo 'Building the Java application...'
+                sh 'mvn clean package' // Maven build command
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                sh 'mvn test' // Running JUnit tests
+            }
+        }
+        
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the Java application...'
+                sh './deploy.sh' // Example deployment script
+            }
+        }
+        
+        stage('Completion') {
+            steps {
+                echo 'CI/CD pipeline execution completed successfully!'
+            }
+        }
+    }
+}
