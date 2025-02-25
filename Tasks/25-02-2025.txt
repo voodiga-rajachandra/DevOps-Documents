@@ -1,0 +1,21 @@
+An update involves minor improvements or fixes, while an upgrade is a major enhancement or replacement of a system or product.
+
+dpkg (Debian Package Manager) and RPM (Red Hat Package Manager) are package management systems used in Linux distributions to install, manage, and remove software.
+
+dpkg is used in Debian-based distributions like Ubuntu and Kali Linux. It works with .deb packages.
+RPM is used in Red Hat-based distributions like RHEL, CentOS, and Fedora. It works with .rpm packages.
+
+what is -xvfc
+x → Extracts files from the archive.
+v → Verbose mode (shows the extraction process).
+f → Specifies the filename of the archive to extract.
+c → Creates a new archive (which contradicts -x, so this part is likely a mistake).
+
+In Linux, the exit command is used to terminate a script or shell session, and the number after exit indicates the exit status (also called the return code).
+
+exit 0 → Indicates successful execution (no errors).
+exit 1 → Indicates a general error or failure in execution.
+By convention:
+
+0 = Success
+1-255 = Errors (different numbers may indicate different types of failures)
