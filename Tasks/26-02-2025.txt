@@ -1,0 +1,60 @@
+how to access linux server in gui mode
+Using Remote Desktop (RDP)
+If your server has a desktop environment, you can use RDP.
+
+Steps:
+Install xrdp on the server:
+
+
+sudo apt update && sudo apt install xrdp -y   # Ubuntu/Debian
+sudo systemctl enable --now xrdp
+
+Install a desktop environment (if not already installed):
+
+
+sudo apt install ubuntu-desktop -y   # Ubuntu
+sudo apt install xfce4 -y            # Lightweight option
+Connect using Remote Desktop Client (Windows: mstsc, Linux: Remmina):
+
+Enter the server IP and log in with your credentials.
+
+how to change default portno of jenkins on Linux
+
+change the default port number of Jenkins on a Linux server, follow these steps:
+
+1. Modify the Jenkins Configuration File
+The default Jenkins port is 8080. You can change it by editing the configuration file.
+
+For Ubuntu/Debian Systems:
+Open the Jenkins configuration file:
+sudo nano /etc/default/jenkins
+Find the line that starts with HTTP_PORT=8080 and change it to your desired port, e.g.:
+HTTP_PORT=9090
+Save the file (Ctrl + X, then Y, then Enter).
+
+how to start and stop jenkins on Linux
+
+sudo systemctl start jenkins
+sudo systemctl stop jenkins
+sudo systemctl restart jenkins
+
+
+what if jenkins administrator forget password where jenkins is running on Linux
+
+Enable "No Security" Mode (Last Resort)
+If removing the password hash doesn't work, disable security temporarily:
+
+Open config.xml:
+sudo nano /var/lib/jenkins/config.xml
+Find this section:
+<useSecurity>true</useSecurity>
+Change it to:
+<useSecurity>false</useSecurity>
+Save and exit.
+
+Restart Jenkins:
+sudo systemctl restart jenkins
+Now, you can access Jenkins without authentication and reset the password via the UI.
+
+Re-enable security by changing <useSecurity>true</useSecurity> back in config.xml.
+
